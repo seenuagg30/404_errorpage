@@ -1,0 +1,115 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page--404</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="D:\Study\project\style_404.css"> -->
+<style>
+    
+    *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            background: rgb(237, 245, 253);
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .title{
+            font-size: 5rem;
+            font-family: 'montserrat' , sans-serif;
+            animation: slideDown 0.3s linear;
+        }
+        .text{
+            font-size: 1.25rem;
+            margin-top: 0.5rem;
+        }
+        .lost-image {
+            max-width: 300px;
+        }
+        .fill-up {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: rgb(220, 237, 255);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 200px 20px 200px 20px;
+            z-index: -1;
+        }
+
+        .fill-up::before{
+            position: relative;
+            content: '';
+            top: 10px;
+            left: 10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgb(130, 173, 216);
+        }
+        .btn{
+            margin-top: 20px;
+            padding: 1rem 3rem;
+            border: 5px solid rgb(130, 173 ,216);
+            background: rgb(130, 173, 216);
+            border-radius: 1rem;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-weight: 600;
+            font-family: 'montserrat';
+            animation: slideUp 0.3s linear;
+        }
+        @keyframes slideUp {
+            from{
+                transform: translateY(50px);
+            }
+            to{
+                transform: translateY(0px);
+            }
+        }
+        /* @keyframes slideDown {
+            from{
+                transform: translate(-50px,-30px);
+            }
+            to{
+                transform: translate(0px);
+            }
+            
+        } */
+        /* .lost-image{
+            height: 300;
+            width: 300;
+        } */
+
+</style>
+    
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">Oops!!</h2>
+        <p class="text">404 - Page not found</p>
+        <img src="lost.png" alt="Reloading" class="lost-image" />
+        <a href="#" class="btn">Take me to homepage</a>
+        <div class="fill-up"></div>
+    </div>
+</body>
+</html>
